@@ -1,0 +1,304 @@
+.home-inner-content  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+.home-inner-content  ::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+.home-inner-content  :-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+.home-inner-content  :-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+.home-sec-wrapper{
+	position: relative;
+	height: 100vh !important;
+	overflow: hidden;
+	display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
+	 @include media-breakpoint-between(xs,sm){
+	 	overflow-x: hidden;
+	 	overflow-y: auto;
+	 	background-color: #2D2A44;
+	 }
+	 @include custom-media-breakpoint-between-width-height('411px', '823px'){
+	 	overflow-x: hidden;
+	 	overflow-y: auto;
+	 	background-color: #2D2A44;
+	 }
+	 @include custom-media-breakpoint-between-width-height('600px', '1024px'){
+	 	 overflow-x: hidden;
+	 	overflow-y: auto;
+	 	background-color: #2D2A44;
+	 	height: 100% !important;
+	 }
+	 @include custom-media-breakpoint-between-width-height('640px', '360px'){
+         height: 100% !important;
+	 }
+     
+
+	.home-header {
+	    background-color: transparent;
+	    border-bottom: 0;
+	    position: relative;
+    	z-index: 11;
+    	padding: rem(12) 0 rem(10);
+    	h1{
+    		font-size: rem(12) !important;
+			padding-top: rem(6) !important;
+    	}
+    	@include media-breakpoint-between(xs,sm){
+    		margin-top: 40px;
+    	}
+	}
+	.header-border {
+    	border-bottom: 1px solid #5b5455;
+    	margin: 0;
+    	position: relative;
+    	z-index: 11;
+	}
+	.home-inner-content {
+	    position: relative;
+	    z-index: 11;
+	    color: #fff;
+	    padding: 0% 12% 0;
+	    display: flex;
+	    flex-direction: column;
+	    height: 100%;
+	    vertical-align: middle;
+	    justify-content: center;
+	    @include custom-media-breakpoint-between('1367px', '1399px'){
+	    	padding: rem(0) rem(20) rem(0);
+	    }
+	    @include custom-media-breakpoint-between('1230px', '1366px'){
+	    	padding: rem(0) rem(20) rem(0);
+	    }
+	    @include custom-media-breakpoint-between('1200px', '1229px'){
+	    	padding: rem(0) rem(30) rem(0);
+	    }
+	    @include media-breakpoint-between(lg,lg){
+              padding: 0% 2% 0;
+	    }
+	    @include media-breakpoint-between(md,md){
+	    	padding: 0% 0% 0;
+	    }
+	    @include custom-media-breakpoint-between-width-height('375px', '812px'){
+			padding: 15% 0% 15%;
+	    }
+	    @include custom-media-breakpoint-between-width-height('411px', '823px'){
+			padding: 15% 0% 15%;
+	    }
+	    @include custom-media-breakpoint-between-width-height('600px', '1024px'){
+             padding: 10% 2% 10%;
+
+	    }
+	    @include media-breakpoint-between(xs,sm){
+	    	padding: rem(25) rem(15) rem(30);
+	    }
+	    h2{
+	    	font-size: rem(32);
+		    font-family: "Montserrat";
+		    margin-bottom: 6px;
+		    @include custom-media-breakpoint-between('1200px', '1370px'){
+		    	font-size: rem(22);
+		    }
+		    @include media-breakpoint-between(xs,sm){
+		    	font-size: rem(24);
+		    }
+		    @include custom-media-breakpoint-between('1367px', '1399px'){
+		    	font-size: rem(28);
+		    }
+	    }
+	    p{
+	    	font-size: rem(18);
+		    line-height: rem(24);
+		    margin-bottom: rem(14);
+		    @include media-breakpoint-between(xs,sm){
+	    		font-size: rem(16);
+		    }
+	    }
+	    .project-eror-text {
+		    font-size: 12px !important;
+		    margin-bottom: 0 !important;
+		    display: none;
+		    font-weight: 500;
+		}
+	    .form-control{
+	    	border-radius: 3px;
+		    background: #51536d;
+		    background: -moz-linear-gradient(left, #51536d 0%, #535671 100%);
+		    background: -webkit-linear-gradient(left, #51536d 0%,#535671 100%);
+		    background: linear-gradient(to right, #51536d 0%,#535671 100%);
+		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51536d', endColorstr='#535671',GradientType=1 );
+		    color: #fff;
+		    border: 0;
+		    padding: 7px 10px 8px;
+		    height: rem(45);
+			line-height: rem(45);
+			font-size: rem(18);
+			@include custom-media-breakpoint-between('1200px', '1370px'){
+				height: rem(40);
+				line-height: rem(40);
+			}
+			@include media-breakpoint-between(xs,sm){
+				height: rem(40);
+				line-height: rem(40);
+			}
+			&:focus{
+				box-shadow:none;
+			}
+	    }
+	    .next-button {
+		    width: 100%;
+		    height: 50px;
+		    font-size: 14px;
+		    text-transform: uppercase;
+		    font-weight: 600;
+		    background-color: #1E8FFB;
+		    border: 0;
+		    border-radius: 3px;
+		    transition: 0.3s;
+		    @include custom-media-breakpoint-between('1200px', '1370px'){
+		    	height: 40px;
+		    }
+		    @include media-breakpoint-between(xs,sm){
+		    	height: 40px;
+		    }
+		    i{
+		    	display: none;
+		    }
+		    &:hover{
+		    	box-shadow: 0 0 10px rgba(30,143,251,.5);
+		    	i{
+		    		display: block;
+		    	}
+		    	strong{
+		    		display: none;
+		    	}
+		    }
+		    &:active,
+		    &:focus{
+		    	background-color: #1E8FFB;
+		    	box-shadow: none;
+		    }
+		}
+		.account-link {
+		    font-size: 14px;
+		    color: #FFFFFF;
+		    font-weight: 600;
+		    text-transform: uppercase;
+		    text-align: center;
+		    padding-top: 10px;
+		    a{
+		    	text-decoration: underline;
+   				color: #fff;
+   				margin: 0 5px;
+		    }
+		    span{
+		    	display: block;
+			    font-size: 12px;
+			    font-weight: 500;
+			    text-transform: inherit;
+		    }
+		}
+
+	}
+	.home-banner {
+	    width: 100%;
+	    position: absolute;
+	    max-width: 100%;
+	    top:0;
+	    background-image: url(/images/home-banner-1.jpg);
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    height: 100vh !important;
+	}
+	.overlaye-banner-home {
+	    position: absolute;
+	    top: 0;
+	    height: 100vh !important;
+	    background: transparent linear-gradient(270deg, #2D2A44 0%, #2C2944F6 23%, #0B004500 100%) 0% 0% no-repeat padding-box;
+	    z-index: 11;
+	    right: 0;
+	    width: 65%;
+	    z-index: 10;
+	    opacity: 0.8;
+	     @include media-breakpoint-between(xs,sm){
+	     	opacity: 0.6;
+	     	width: 100%;
+	     	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2d2a44+1,2c2944+100 */
+			background: #2d2a44; /* Old browsers */
+			background: -moz-linear-gradient(top, #2d2a44 1%, #2c2944 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #2d2a44 1%,#2c2944 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #2d2a44 1%,#2c2944 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2a44', endColorstr='#2c2944',GradientType=0 ); /* IE6-9 */
+	     }
+	}
+}
+
+.custom-language-selector {
+    background: -moz-linear-gradient(left, #4d4a5e 0%, #4f4c61 100%);
+    background: -webkit-linear-gradient(left, #4d4a5e 0%,#4f4c61 100%);
+    background: linear-gradient(to right, #4d4a5e 0%,#4f4c61 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d4a5e', endColorstr='#4f4c61',GradientType=1 );
+    display: inline-block;
+    padding: 0 24px 0 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 4px;
+    position: relative;
+    &:after{
+    	font-family: "icomoon";
+	    content: "\e915";
+	    position: absolute;
+	    top: 6px;
+	    right: 8px;
+	    transform: rotate(90deg);
+	    font-size: 10px;
+	    color: #1CCDAE;
+    }
+    span{
+    	font-size: 12px;
+	    font-weight: 500;
+	    text-align: left;
+	    padding: 4px 0;
+	    display: inline-block;
+	    img{
+	    	margin-right: 5px;
+	    	border-right: 2px;
+	    }
+    }
+    .language-drp {
+    	display: none !important;
+	}
+	&:hover{
+		.language-drp {
+    		display: block !important;
+		}
+	}
+}
+
+.prjoect-name-eror{
+    outline: none;
+    .form-group,
+    .bv-no-focus-ring{
+    	outline: none;
+    } 
+	.project-eror-text {
+	    display: block !important;
+	}
+}
+
+.lang-ar{
+	.home-inner-content{
+		direction: rtl;
+		text-align: right;
+	}
+	.custom-language-selector span img {
+	    margin-right: 0px;
+	    margin-left: 5px;
+	    
+	}
+}

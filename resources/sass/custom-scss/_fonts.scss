@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap');
+
+@font-face {
+  font-family: 'times-new-roman-grassetto-corsivo';
+  src: url('../../fonts/times-new-roman-grassetto-corsivo.eot');
+  src: local('☺'), url('../../fonts/times-new-roman-grassetto-corsivo.woff') format('woff'), 
+  url('../../fonts/times-new-roman-grassetto-corsivo.ttf') format('truetype'), 
+  url('../../fonts/times-new-roman-grassetto-corsivo.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arial';
+  src: url('../../fonts/arial.eot');
+  src: local('☺'), url('../../fonts/arial.woff') format('woff'), 
+  url('../../fonts/arial.ttf') format('truetype'), 
+  url('../../fonts/arial.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueMed';
+  src: url('../../fonts/HelveticaNeueMed.eot');
+  src: local('☺'), url('../../fonts/HelveticaNeueMed.woff') format('woff'), 
+  url('../../fonts/HelveticaNeueMed.ttf') format('truetype'), 
+  url('../../fonts/HelveticaNeueMed.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../fonts/icomoon.eot?g72p7g');
+  src:  url('../../fonts/icomoon.eot?g72p7g#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?g72p7g') format('truetype'),
+    url('../../fonts/icomoon.woff?g72p7g') format('woff'),
+    url('../../fonts/icomoon.svg?g72p7g#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+.icon-cog:before {
+  content: "\e994";
+}
+.icon-phone:before {
+  content: "\e900";
+}
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-log-out:before {
+  content: "\e901";
+}
+.icon-external-link:before {
+  content: "\e902";
+}
+.icon-file-plus:before {
+  content: "\e903";
+}
+.icon-person:before {
+  content: "\e90b";
+}
+.icon-link:before {
+  content: "\e90e";
+}
+.icon-info_outline:before {
+  content: "\e90f";
+}
+.icon-save:before {
+  content: "\e910";
+}
+.icon-check:before {
+  content: "\e911";
+}
+.icon-Delete:before {
+  content: "\e904";
+  color: #d13434;
+}
+.icon-Download:before {
+  content: "\e905";
+  color: #1a7de5;
+}
+.icon-Duplicate:before {
+  content: "\e906";
+  color: #1a7de5;
+}
+.icon-Edit:before {
+  content: "\e907";
+  color: #1a7de5;
+}
+.icon-list:before {
+  content: "\e908";
+}
+.icon-danger-sign:before {
+  content: "\e909";
+}
+.icon-filter:before {
+  content: "\e90a";
+}
+.icon-loss:before {
+  content: "\e90c";
+}
+.icon-edit:before {
+  content: "\e90d";
+}
+.icon-back:before {
+  content: "\e912";
+}
+.icon-folder:before {
+  content: "\e913";
+}
+.icon-info:before {
+  content: "\e914";
+}
+.icon-right-arrow:before {
+  content: "\e915";
+}
+.icon-youtube:before {
+  content: "\e916";
+}
+.icon-dustbin-1:before {
+  content: "\e917";
+}
+.icon-minisize-browser:before {
+  content: "\e918";
+}
+.icon-dots-horizontal-triple:before {
+  content: "\e919";
+}

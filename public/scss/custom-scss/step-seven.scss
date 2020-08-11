@@ -1,0 +1,94 @@
+.recived-project {
+    margin: 0 auto;
+    width: rem(900);
+    @include media-breakpoint-between(lg, lg){
+           width: rem(800);
+    }
+    @include media-breakpoint-between(md, md){
+           width: rem(650);
+    }
+    @include media-breakpoint-between(xs, sm){
+           width: auto;
+    }
+    .card-body{
+    	    border-bottom: 1px solid #ebebeb;
+    	    padding: rem(32) rem(20) rem(48);
+    	    color: #2f2b47;
+    	    @include media-breakpoint-between(md, md){
+                 padding: rem(20) rem(15) rem(30);
+    	    }
+          @include custom-media-breakpoint-between('1200px', '1370px'){
+                  padding-top: rem(25);
+                  padding-bottom: rem(30);
+          }  
+    	h2{
+		    font-size: rem(36);
+		    margin: 0 0 0px;
+		    padding-bottom: rem(10);
+		    @include media-breakpoint-between(lg, lg){
+		    	font-size: rem(30);
+   				padding-bottom: 0;
+		    }
+		    @include media-breakpoint-between(md, md){
+		    	font-size: rem(26);
+   				padding-bottom: 0;
+		    }
+        @include custom-media-breakpoint-between('1200px', '1370px'){
+          padding-bottom: 0;
+          font-size: rem(32);
+        }
+    	}
+    	p{
+    		font-size: rem(14);
+   			margin: rem(20) 0 0;
+   			line-height: rem(24);
+   			@include media-breakpoint-between(xs, sm){
+   				br{
+   					display: none;
+   				}
+   			}
+   			a{
+			    display: block;
+				color: #1ccdae;
+   			}
+    	}
+    }
+    .social-icon {
+    	&.fotter-social{
+           padding: rem(13) 0 rem(25);
+           @include media-breakpoint-between(xs, sm){
+           	    padding: rem(24) rem(10) rem(28);
+           }
+    	}
+    	p{
+    		font-size: rem(14);
+    		margin: 0 0 rem(20);
+    		color: #2f2b47;
+    	}
+    	ul{
+    		    display: inline-block;
+    		li{
+			    display: inline-block;
+			    margin-right: rem(20);
+    			a{
+				    width: rem(43);
+				    height: rem(43);
+				    line-height: rem(43);
+				    display: inline-block;
+				    background-color: #1ccdae;
+				    color: #fff;
+				    border-radius: 50%;
+    				i{
+    					font-size: rem(20);
+    					line-height: rem(43);
+
+    				}
+    			}
+    		}
+    	}
+	}
+}
+
+a:hover{
+	text-decoration: none;
+}

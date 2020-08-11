@@ -1,0 +1,12 @@
+// mixin for rem conversion
+$baseFontSize : 16;
+@function rem($pixels, $context: $baseFontSize) {
+  @return $pixels / $context * 1rem;
+}
+ 
+// custom break points
+@mixin custom-media-breakpoint-between($lower, $upper) {
+    @media (min-width: $lower) and (max-width: $upper) {
+      @content;
+    }
+}

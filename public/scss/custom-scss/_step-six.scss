@@ -1,0 +1,46 @@
+.contact-form {
+    padding: rem(9) rem(20) rem(30) rem(20);
+   
+}
+ 	 
+.checkout-form{
+	
+	.form-group {
+       margin-bottom: rem(10);
+       label{
+       	font-size: rem(10);
+         color: #6a6a6a;
+         margin-bottom: rem(3);
+        }
+        .form-control:focus{
+              border-color: #1ccdae !important;
+              outline: 0;
+              box-shadow: (0) rem(3) rem(11) rem(7) rgba(57, 209, 180, 0.3) !important;
+         
+
+        }
+       input{
+       	    font-size: rem(18);
+           color: #2f2b47;
+           font-weight: 400;
+            border-color: #bfbfbf;
+            border-radius: 3px; 
+
+         }
+         
+         	textarea::placeholder {
+		      color: #bfbfbf;
+		      font-weight: normal;
+	 	      font-size: rem(18);
+            }
+            input::placeholder {
+			      color: #bfbfbf;
+			      font-weight: normal;
+			      font-size: rem(18);
+             }
+
+         
+    }
+
+
+}

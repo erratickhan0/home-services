@@ -1,0 +1,315 @@
+   
+	.review-choices {
+        padding: rem(2) rem(31) rem(12) rem(31);
+         @include media-breakpoint-between(xs,sm){
+                padding-top: rem(6);
+           }
+        p {
+            margin-bottom: (0);
+        }
+         
+    }
+
+.review-section-right {
+    .scrollbar {
+        padding-right: rem(23);
+        height: rem(485);
+         @include media-breakpoint-between(xs,sm){
+                height: auto !important;
+                padding-right: (0);
+           }
+
+    }
+}
+   
+.review-spinner{
+     @include media-breakpoint-between(xs,sm){
+            float: right;    
+        }
+       
+}
+ .review-spinner span {
+    margin-top: 13px;
+    }
+
+.review-spinner .ui-spinner-down {
+    margin-left: rem(23);
+     @include media-breakpoint-between(xs,sm){
+               margin-left: (0); 
+    }
+     @include media-breakpoint-between(md,md){
+        margin-left: (0);
+     }
+    @include media-breakpoint-between(lg,lg){
+         margin-left: (0);
+                 
+    }
+}
+
+.review-spinner .ui-spinner-up {
+    margin-right: rem(39);
+    margin-top: rem(4);
+     @include media-breakpoint-between(xs,sm){
+                margin-right: (0);
+    }
+     @include media-breakpoint-between(md,md){
+        margin-right: rem(6);
+     }
+     @include media-breakpoint-between(lg,lg){
+         margin-right: rem(20);
+                 
+    }
+}
+.review-spinner span {
+    width: 100%;
+    margin-top: (0);
+     @include media-breakpoint-between(xs,sm){
+        margin-top: rem(12);
+    }
+     @include media-breakpoint-between(md,md){  
+        width: rem(100);
+     }
+      @include media-breakpoint-between(lg,lg){
+         width: rem(105);
+                 
+    }
+}
+.review-spinner .ui-spinner-input {
+    margin-left: rem(50);
+    margin-top: rem(2);
+    @include media-breakpoint-between(md,md){
+        margin-left: rem(26);
+        width: rem(40);
+     }
+      @include media-breakpoint-between(lg,lg){
+         margin-left: rem(23);
+                 
+    }
+     @include media-breakpoint-between(xs,sm){
+             margin-left: rem(25);
+            margin-right: rem(25);
+    }
+}
+    .review-product{
+        .add-product{
+           width: 35%;
+            margin: 0 auto;
+            border: rem(1) dashed #d7d7d7;
+            padding: rem(7) rem(12) rem(7) (0);
+            font-size: rem(18);
+            color: #b4b4b4;
+            border-radius: rem(7);
+            margin-top: rem(12);
+             @include media-breakpoint-between(md,md){
+                
+                width: 65%;
+                font-size: rem(12);
+             }
+             @include media-breakpoint-between(lg,lg){
+                    width: 55%;
+                    font-size: rem(16);
+                    margin-top: rem(13);
+                         
+            }
+            @include media-breakpoint-between(xs,sm){
+                    width: 100%;
+                    padding: rem(7) rem(0) rem(7) rem(0);
+                    font-size: rem(14);
+                     span{
+                        padding-right: 19px;
+                        font-size: 20px;
+                        display: inline-block;
+                }
+                   
+            }
+            span{
+                padding-right: 10px;
+                font-size: 13px;
+                display: inline-block;
+            }
+             a {
+                 color: #cccbcb;
+            }
+         }
+     }
+
+.review-order{
+	border-bottom: rem(1) solid #e1e1e1;
+        padding-bottom: rem(14);
+        padding-top: rem(11);
+         @include media-breakpoint-between(xs,sm){
+                 padding-bottom: rem(13);
+                 padding-top: rem(15);
+                 position: relative;
+           }
+           @include media-breakpoint-between(md,md){
+              position: relative;
+             }
+	 .machien-image {
+             border: rem(1) solid #f4f4f4;
+             border-radius: rem(10);
+             padding: rem(4) rem(10) rem(5) rem(10);
+             display: inline-block;
+             margin-left: rem(16);
+             img{
+                width: rem(75);
+                height: rem(75);
+                 @include media-breakpoint-between(xs,sm){
+                    width: rem(50);
+                    height: rem(65);
+                  
+                 }
+                 @include media-breakpoint-between(md,md){
+                      width: rem(50);
+                      height: rem(70);
+                }
+
+             }
+                @include media-breakpoint-between(xs,sm){
+                    margin-left: rem(0);
+                    padding: rem(6) rem(9) rem(5) rem(9);
+
+                }
+                @include media-breakpoint-between(md,md){
+                    margin-left: rem(17);
+                    padding: rem(4) rem(6) rem(2) rem(6);
+                }
+                 @include media-breakpoint-between(lg,lg){
+                    margin-left: rem(7);
+                    padding: rem(9) rem(9) rem(9) rem(9);
+                     
+               }
+        }
+        .review-items {
+                padding-top: rem(18);
+                   @include media-breakpoint-between(md,md){
+                        padding-top: rem(15);
+                        float: right;
+                    }
+                     @include media-breakpoint-between(lg,lg){
+                            padding-top: rem(12);
+                    }
+                     @include media-breakpoint-between(xs,sm){
+                             padding-top: (0);
+
+                     }
+                     a{
+                        float: right;
+                     }
+
+                i {
+                	font-size: 22px;
+                	color: #5870fe;
+                      @include media-breakpoint-between(xs,sm){
+                             font-size: rem(15);
+                            
+
+                     }
+                }
+                .delet {
+                    color: #fe0f0f !important;
+                        padding-left: rem(40);
+                         @include media-breakpoint-between(xs,sm){
+                             font-size: rem(15);
+                             padding-left: rem(7);
+                         }
+                          @include media-breakpoint-between(md,md){
+                                padding-left: rem(12);
+                         }
+ 
+                         @include media-breakpoint-between(lg,lg){
+                             padding-left: rem(25);
+                        }
+                        
+                }
+        }
+		strong {
+		    font-size: rem(10);
+		    color: #fff;
+		    background-color: #f68e56;
+		    padding: rem(2) rem(13) rem(3) rem(13);
+		    border-radius: rem(8);
+             @include media-breakpoint-between(md,md){
+                 padding: rem(2) rem(11) rem(3) rem(10);
+                 position: absolute;
+                 top: rem(4);
+                 left: (0);
+                 margin-left: 37%;
+            }
+            @include media-breakpoint-between(lg,lg){
+                 padding: rem(3) rem(10) rem(3) rem(10);
+           }
+           @include media-breakpoint-between(xs,sm){
+                    position: absolute;
+                    top: rem(-28);
+                    margin-left: rem(-50);
+                    top: rem(-15);
+                    padding: rem(1) rem(7) rem(2) rem(7);
+
+            }
+        }
+        .review-icon {
+             @include media-breakpoint-between(xs,sm){
+                 position: relative;
+            }
+        	 span {
+			    border: rem(1) solid;
+			    border-radius: rem(13);
+			    width: rem(25);
+			    height: rem(24);
+			    display: inline-block;
+			    color: #5870fe;
+                 @include media-breakpoint-between(xs,sm){
+                    position: absolute;
+                    left: 0;
+                    bottom: rem(-38);
+                }
+                @include media-breakpoint-between(md,md){
+                    width: rem(20);
+                    height: rem(20);
+        
+                }
+             }
+              i {
+				font-size: rem(14);
+				margin-left: rem(4);
+				color: #5870fe;
+                 @include media-breakpoint-between(md,md){
+                    font-size: rem(12);
+                    margin-left: rem(3);
+                    position: absolute;
+                    margin-top: rem(3);
+        
+                 }
+             }
+
+        }
+        .review-label {
+           padding-top: rem(12);
+            @include media-breakpoint-between(md,md){
+               padding-top: rem(10);
+               font-size: rem(14);
+           }
+            @include media-breakpoint-between(lg,lg){
+                 padding-top: rem(9);
+                 font-size: rem(12);
+           }
+            @include media-breakpoint-between(xs,sm){
+                font-size: rem(12);
+                line-height: rem(14);
+                padding-top: (0);
+                padding-left: rem(10);
+           }
+
+         }
+         .edit-remove {
+            position: absolute;
+            right: rem(-15);
+         }
+         
+            
+    
+}
+
+
+

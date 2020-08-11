@@ -1,0 +1,182 @@
+.contact-form {
+    padding: rem(30) rem(20) rem(30) rem(20);
+    .scrollbar{
+          padding-right: 20px;
+          @include media-breakpoint-between(xs, sm){
+            padding-right: 0px;
+          }
+    }
+   
+}
+ 	 
+.checkout-form{
+  .header-after-title-select{
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: #b3bbc5;
+    margin-bottom: 40px !important;
+    text-align: left;
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background-color: #ea2121;
+      border-radius: 50%;
+      position: relative;
+      top: -3px;
+      right: 2px;
+    }
+  }
+	
+	.form-group {
+       margin-bottom: rem(10);
+       label{
+       	font-size: rem(14);
+         color: #4F4E61;
+         text-transform: initial;
+         display: block;
+         margin-bottom: rem(7);
+         font-weight: 500;
+         p{
+          display: inline-block;
+          width: calc(100% - 65px);
+          margin-bottom: 0;
+          font-size: 13px;
+         }
+         span{
+          text-align: right;
+          float: right;
+          font-size: 12px;
+          color: #F23B3B;
+          font-weight: 500;
+          display: inline-block;
+         }
+        }
+        .form-control:focus,
+        .form-control:hover{
+              box-shadow: 0px 0px 10px #1CCDAEA7;
+              border-color:#1CCDAE;
+              outline: 0;
+        }
+       input,
+       select,
+       textarea{
+       	    font-size: rem(14);
+           color: #2f2b47;
+           font-weight: 400;
+            border-color: #b3bbc5;
+            border-radius: 3px; 
+            padding-right: rem(30);
+            font-family: 'Montserrat';
+         }
+         
+         	textarea::placeholder {
+		      color: #BCBABC;
+		      font-weight: normal;
+	 	      font-size: rem(14);
+            }
+            input::placeholder {
+			      color: #BCBABC;
+			      font-weight: normal;
+			      font-size: rem(14);
+             }
+           textarea.form-control{
+             height: 130px;
+           }
+          input,
+          select{
+            height: 40px;
+          }
+          .arrow-select{
+            position: relative;
+            &:after {
+              content: "\e912";
+              position: absolute;
+              top: 40%;
+              -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+              right: 5px;
+              -webkit-transform: rotate(270deg);
+              transform: rotate(270deg);
+              font-size: 10px;
+              font-weight: 700;
+              color: #9fa1a6;
+              font-family: 'icomoon';
+            }
+            select{
+               -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+            }
+            
+          }     
+    }
+
+
+}
+.form-has-icon {
+    position: relative;
+    &.icon-r{
+      i{
+        right: 20px;
+      }
+    }
+    i{
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translate(0, -50%);
+      font-size: 16px;
+      display: none;
+      @include media-breakpoint-between(xs, sm){
+        font-size: 14px;
+      }
+    }
+}
+.has-success{
+  input,
+  select{
+    border-color: #1ccdae !important,
+  }
+  i.icon-check{
+    display: block;
+    color: #1ccdae;
+  }
+  
+}
+.has-danger{
+  input,
+  select{
+    border-color: #F23B3B !important;
+    box-shadow: 0px 0px 10px #D1343480 !important;
+  }
+  i.icon-danger-sign{
+    display: block;
+    color: #F23B3B;
+  }
+}
+
+.contact-section-right{
+  @include media-breakpoint-between(xs, sm){
+      margin-top: 6px;
+  }
+}
+
+.lang-ar{
+  .checkout-form .form-group label {
+    direction: rtl;
+  }
+  .checkout-form .header-after-title-select {
+    direction: rtl;
+  }
+  .checkout-form .header-after-title-select:before {
+    right: -1px;
+  }
+  .checkout-form .form-group label p {
+    font-size: 14px;
+  }
+}

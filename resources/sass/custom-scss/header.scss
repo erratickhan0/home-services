@@ -1,0 +1,123 @@
+.header{
+	background-color: #2D2A44;
+    text-align: center;
+    padding: rem(15) 0;
+    border-bottom: 1px solid #423f54;
+	@include media-breakpoint-between(md,lg){
+
+	}
+	@include media-breakpoint-between(xs,sm){
+
+	}
+	 @include custom-media-breakpoint-between-width-height('411px', '823px'){
+
+	 }
+	@include custom-media-breakpoint-between('1200px', '1370px'){
+
+	}
+	.media{
+		display: block;
+		width: 100%;
+		img{
+    		max-height: 90px;
+    		width: auto;
+    		@include media-breakpoint-between(xs,sm){
+		      	max-height: 80px;
+			}
+			@include custom-media-breakpoint-between('1200px', '1370px'){
+
+			}
+		}
+		.media-body{
+			h1{
+				padding: rem(8) 0 0 rem(0);
+			    color: #fff;
+			    font-size: rem(14);
+			    display: block;
+			    text-transform: uppercase;
+			    font-family: "Montserrat";
+			}
+		}
+	}
+}
+
+.switch-lng-wrapper{
+	text-align: center;
+    margin-top: 11px;
+    height: 85px;
+	/*position: fixed;
+    bottom: 30px;*/
+    @include media-breakpoint-between(xs,sm){
+    	position: relative;
+    	bottom: 0;
+    }
+    .switch-ln{
+    	display: block;
+	    font-size: 12px;
+	    color: #fff;
+	    font-weight: 500;
+	    margin-bottom:0;
+    }
+}
+.locale-changer {
+    display: inline-block;
+    margin-top: 5px;
+    select{
+    	padding: 4px 35px 5px 5px;
+	    background: #4d4a5e;
+   		background: -moz-linear-gradient(left, #4d4a5e 0%, #4f4c61 100%);
+    	background: -webkit-linear-gradient(left, #4d4a5e 0%,#4f4c61 100%);
+    	background: linear-gradient(to right, #4d4a5e 0%,#4f4c61 100%);
+    	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d4a5e', endColorstr='#4f4c61',GradientType=1 );
+		border: 0;
+	    border-radius: 3px;
+	    font-size: 12px;
+	    color: #fff;
+    	font-weight: 700;
+    	cursor: pointer;
+    	position: relative;
+	    &:focus{
+	    	outline: none;
+	    }
+	    &:after{
+	    	content: '';
+	    	background-image: url(/images/saudi-flag.jpg?364f055…);
+		    width: 37px;
+		    position: absolute;
+		    top: 0;
+		    left: 0px;
+		    height: 59px;
+		    background-repeat: no-repeat;
+		    z-index: 100000000000000000;
+		    background-size: cover;
+	    }
+	    option{
+	    	background: #4d4a5e;
+		    outline: none;
+		    border-color: #4d4a5e;
+	    }
+    }
+    @include media-breakpoint-between(xs,sm){
+    	display: block;
+	    width: 100%;
+	    text-align:center;
+    }
+}
+
+
+.lang-ar{
+	.header{
+		.media{
+			.media-body{
+				h1{
+					font-size: rem(18) !important;
+				}
+			}
+		}
+	}
+	.switch-lng-wrapper{
+		.switch-ln{
+			font-size: 18px;
+		}
+	} 
+}

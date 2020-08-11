@@ -1,0 +1,288 @@
+.starting-point {
+    p{
+        margin: 0;
+    }
+
+} 
+.starting-point-right {
+     @include media-breakpoint-between(xs,sm){
+         margin-top: rem(9);
+    }
+}
+
+.starting-point-left {
+    @include media-breakpoint-between(md, md){
+            margin-bottom: rem(20);
+        }
+    }
+     .bookmark-link {
+         padding: rem(13) rem(15) rem(13) rem(15);
+         		p {
+                    font-size: rem(14);
+                    color: #2f2b47;
+                }
+                span {
+                     font-size: rem(10);
+                     color: #e97e00;
+                     display: block;
+                }
+                a {
+                     color: #1ccdae;
+                     font-size: rem(12);
+                     @include media-breakpoint-between(lg,lg){
+                        font-size: rem(10);
+                     }
+                }
+                .bookmark-media{ 
+                    padding: rem(6) (0) rem(7) (0);
+                    .copy-icon {
+                        width: rem(40);
+                        height: rem(40);
+                        padding: rem(10) rem(7) rem(5) rem(9);
+                        margin-right: rem(11);
+                        border-radius: rem(3);
+                        background-color: #ebebeb;
+                            @include media-breakpoint-between(lg,lg){
+                                    margin-right: rem(8);
+                                    padding: rem(5) rem(9) rem(3) rem(7);
+                                    width: rem(35);
+                                     height: rem(34);
+                            }
+                             
+                     i {
+                         font-size: rem(23);
+                         color: #3fb3ef;
+                    } 
+
+                    }
+                    .bookmark-media-body {
+                        overflow: hidden;
+                     }
+                }
+         
+     }
+
+        
+.selection-point{
+    padding: 0;
+        .selection-box-title {
+             border-bottom: rem(1) solid #e1e1e1;
+             padding: rem(11) 0px rem(11) 0px;
+             text-transform: uppercase;
+             font-size: rem(10);
+             color: #bcbabc;
+             @include media-breakpoint-between(xs,sm){
+                display: none;
+           }
+            @include media-breakpoint-between(md, md){
+                display: none;
+            }
+            @include media-breakpoint-between(lg, lg){
+                display: none;
+            }
+        }
+        span {
+             text-align: center;
+             display: block;
+        }
+
+.selection-box {
+        padding: rem(13) rem(27) rem(13) rem(13);
+        @include media-breakpoint-between(xs,sm){
+               padding: rem(13);
+        }
+       
+     }
+}
+.raqtan-custom-checkbox{
+    .starting-budget {
+        font-size: rem(12);
+        color: #1ccdae;
+        font-weight: 700;
+        z-index: 100;
+           @include media-breakpoint-between(xs,sm){
+                float: left;
+           }
+    }
+    .information {
+        font-size: rem(10);
+        color: #bcbabc;
+        @include media-breakpoint-between(xs,sm){
+               padding-top: rem(9);
+           }
+           @include media-breakpoint-between(md, md){
+               padding-top: rem(7);
+            }
+    }
+    strong {
+        text-align: center;
+        font-size: rem(10);
+        padding: rem(2) rem(8) rem(3);
+        border-radius: rem(8);
+        background-color: #f68e56;
+        color: #ffff;
+        text-transform: uppercase;
+        @include media-breakpoint-between(xs,sm){
+                float: left;
+                padding: rem(2) rem(12) rem(1) rem(12);
+           }
+            @include media-breakpoint-between(md, md){
+                margin-left: rem(-30);
+            }
+    }
+    &.cc-style-1 {
+        position: relative;
+        margin-bottom: rem(20);
+        padding: rem(8) rem(13) rem(12) rem(13);
+        .checkbox-holder,
+        .checkbox-holder span,
+        .checkbox-holder input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .checkbox-space {
+           margin-top: rem(6);
+           text-align: center;
+           @include media-breakpoint-between(xs,sm){
+                margin-top: (0);
+                
+           }
+           @include media-breakpoint-between(md, md){
+              float: left;
+            }
+        }
+        .checkmark-label{
+            text-align: left;
+            padding-left: rem(42);
+            @include media-breakpoint-between(xs,sm){
+                 margin: rem(1) (0) rem(8) (0);
+           }
+            @include media-breakpoint-between(md, md){
+               margin-bottom: rem(5);
+            }
+
+        }      
+        .checkbox-holder{
+            span{
+                border: rem(1) dashed #bcbabc;
+                border-radius: rem(5);
+            }
+            .check-placeholder{
+                    width: rem(23);
+                    height: rem(23);
+                    border: rem(2) solid #efefef;
+                    border-radius: rem(12);
+                    margin-left: rem(11);
+                    margin-top: rem(16);
+                     @include media-breakpoint-between(xs,sm){
+                          margin-top: rem(10);
+                        }
+                    i {
+                        font-size: rem(20);
+                        top: -2px;
+                        position: absolute;
+                        right: -4px;
+                        left: 0;
+                        color: #ffff;
+                        display: none;
+                    }
+                
+            }
+            .custom-radio{
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+            input{
+                z-index: 100;
+            }
+            input:checked + span{
+                background-color: #1ccdae;
+                border:none;
+            }
+            input:checked + span + span i{
+                display: block;
+            }
+        }
+    }
+    &.budget-selected{
+           p {
+                color:#fff !important;
+           } 
+    }
+}
+.check-border {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+.customprogress-bar {
+    margin-top: rem(30);
+    @include media-breakpoint-between(xs, sm){
+         margin-top: rem(20);
+    }
+        span {
+            padding: rem(12) rem(10) rem(15) rem(9);
+            background-color: #636075;
+            border-radius: rem(6);
+            height: rem(50);
+            display: block;
+            width: rem(50);
+        }
+        .bar-btn {
+            width: rem(260);
+            background-color: #1ccdae;
+            border: none;
+            border-radius: rem(5);
+            font-size: rem(20);
+            font-weight: 600;
+            padding: rem(11) 0px rem(11) 0px;
+            &.finalize-btn{
+                 i{
+                    transform: rotate(0) !important;
+                    font-size: 16px;
+                    margin: 9px 17px 0 0px;
+                    @include media-breakpoint-between(md, md){
+                        font-size: 14px;
+                        margin: 6px 5px 0 0px;
+                    }
+                 }
+            }
+            i{
+                transform: rotate(180deg);
+                display: inline-block;
+                font-size: 14px;
+                float: right;
+                margin: 11px 17px 0 0px;
+                @include media-breakpoint-between(md, md){
+                    margin: 6px 5px 0 0px;    
+                    font-size: 12px;
+                }
+            }
+            @include media-breakpoint-between(lg, lg){
+                width: rem(216);
+                padding: rem(7) 0px rem(9);
+            }
+            @include media-breakpoint-between(md, md){
+                width: rem(139);
+                padding: rem(7) 0px rem(7);
+                font-size: rem(14);
+            }
+            @include media-breakpoint-between(xs, sm){
+                   width: 100%
+            }
+           &:hover {
+               color: #fff;
+               background-color: #1ccdae;
+               border-color: unset;
+            }
+        }
+}
+
+       
+

@@ -1,0 +1,36 @@
+.header{
+	padding-bottom: rem(45);
+	padding-top:rem(40);
+	@include media-breakpoint-between(md,lg){
+      padding-bottom: rem(20);
+	}
+	@include media-breakpoint-between(xs,sm){
+      padding-bottom: rem(25);
+      padding-top: 0;
+	}
+	@include custom-media-breakpoint-between('1200px', '1370px'){
+		padding-bottom: rem(20);
+	}
+	.media{
+		img{
+			border-right: rem(1) solid #4e4b62;
+    		padding-right: rem(35);
+    		@include media-breakpoint-between(xs,sm){
+		      	padding-right: rem(15);
+			}
+			@include custom-media-breakpoint-between('1200px', '1370px'){
+				width: rem(115);
+			}
+		}
+		.media-body{
+			h1{
+				padding: rem(11) 0 0 rem(35);
+			    color: #fff;
+			    font-size: rem(24);
+			    @include media-breakpoint-between(xs,sm){
+		      		padding-left: rem(15);
+				}
+			}
+		}
+	}
+}
