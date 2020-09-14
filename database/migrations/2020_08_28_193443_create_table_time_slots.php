@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLabourTimingsTable extends Migration
+class CreateTableTimeSlots extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateLabourTimingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('labour_timings', function (Blueprint $table) {
+        Schema::create('time_slots', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('labour_id');
-            $table->bigInteger('time_slot_id');
-            $table->time('start_time');
-            $table->time('end_time');
+            $table->string('start_time');
+            $table->string('end_time');
+            $table->string('shift')->nullable();
+            $table->string('flag')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,8 @@ class CreateLabourTimingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('labour_timings');
+        Schema::table('time_slots', function (Blueprint $table) {
+            Schema::dropIfExists('time_slots');
+        });
     }
 }

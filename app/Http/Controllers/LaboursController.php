@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Api\CreateLabourRequest;
 use App\Labour;
+use App\LabourReview;
+use App\LabourTiming;
 use Illuminate\Http\Request;
 use function App\Helpers\paginator;
 use Symfony\Component\HttpFoundation\Response;
@@ -38,6 +40,7 @@ class LaboursController extends Controller
            $labour->address=$request['address'];
            $labour->phone=$request['phone'];
            $labour->city_id=$request['city_id'];
+           $labour->category_id=$request['category_id'];
            $labour->registeration_num=$request['registeration_num'];
            $labour->save();
            return response()->json($labour, Response::HTTP_OK);
@@ -65,7 +68,7 @@ class LaboursController extends Controller
     {
 
         $data=[];
-        $data=$this->model->with('cities')->paginate(10);
+        $data=$this->model->with('cities')->with('cats')->with('timings')->paginate(10);
         return $data;
     }
     public function findLabourTimings($id)
@@ -95,6 +98,51 @@ class LaboursController extends Controller
             $data->delete();
         }
         return [];
+    }
+    public function labourReviewsApi(Request $request)
+    {
+        if(isset($request['customer_id']) && isset($request['labour_id']) && isset($request['message']) && isset($request['rating']))
+        {
+
+            $review=new LabourReview();
+            $review->customer_id=$request['customer_id'];
+            $review->labour_id=$request['labour_id'];
+            $review->message=$request['message'];
+            $review->rating=$request['rating'];
+            $review->name=isset($request['name'])?$request['name']:'';
+            $review->email=isset($request['email'])?$request['email']:'';
+            $review->subject=isset($request['subject'])?$request['subject']:'';
+            $review->save();
+            return response()->json($review, Response::HTTP_OK);
+        }
+        else
+        {
+            return response()->json('Some Params are missing!', 500);
+        }
+
+    }
+    public function addLabourTimings(Request $request)
+    {
+      if(isset($request['labour_id']) && isset($request['time_slot_id']))
+      {
+          $timings=LabourTiming::where('labour_id','=',$request['labour_id'])->where('time_slot_id','=',$request['time_slot_id'])->first();
+          if(!$timings)
+          {
+              $labourtimings=new LabourTiming();
+              $labourtimings->labour_id=$request['labour_id'];
+              $labourtimings->time_slot_id=$request['time_slot_id'];
+              $labourtimings->start_time=1;
+              $labourtimings->end_time=1;
+              $labourtimings->save();
+              return 'timings save';
+          }
+          else
+          {
+              return 'already added';
+          }
+
+      }
+
     }
 
 }

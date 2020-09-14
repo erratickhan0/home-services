@@ -10,3 +10,4 @@ Vue.component('sub-category-modal', require('./components/category/SubCategory.v
 
 // Add Labour
 Vue.component('add-labour-modal', require('./components/labour/AddLabour.vue').default);
+Vue.component('add-labour-timings-modal', require('./components/labour/AddLabourTimings.vue').default);

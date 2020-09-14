@@ -80,6 +80,12 @@
                             <i class="fa fa-dropbox"></i><span>Labour Management</span>
                         </router-link>
                     </li>
+                    <li :class="[currentPage.includes('admin/job-management')? activeClass:'']">
+
+                        <router-link to="/admin/job-management">
+                            <i class="fa fa-dropbox"></i><span>Jobs Management</span>
+                        </router-link>
+                    </li>
                 </ul>
 
 

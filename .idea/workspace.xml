@@ -13,6 +13,27 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -135,6 +156,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1eug7oi4kRkf6EegQJGovvgmnov" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -148,15 +170,15 @@
     <property name="ts.external.directory.path" value="D:\PhpStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\home-services\resources\assets\admin\js\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\home-services\resources\assets\admin\js\components\labour" />
       <recent name="C:\laragon\www\home-services\app\Http\Requests\Api" />
       <recent name="C:\laragon\www\home-services\resources\assets\admin\js\components" />
       <recent name="C:\laragon\www\home-services\public" />
       <recent name="C:\laragon\www\home-services\resources\assets\admin\js\components\common-components" />
-      <recent name="C:\laragon\www\home-services\resources\assets\admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\home-services\resources\assets\admin\js\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -214,7 +236,25 @@
       <workItem from="1596967398614" duration="1426000" />
       <workItem from="1596994548732" duration="712000" />
       <workItem from="1597033915784" duration="55000" />
-      <workItem from="1597166784137" duration="1442000" />
+      <workItem from="1597166784137" duration="3302000" />
+      <workItem from="1597207295134" duration="471000" />
+      <workItem from="1597558398045" duration="6056000" />
+      <workItem from="1597600541027" duration="1403000" />
+      <workItem from="1597927596058" duration="283000" />
+      <workItem from="1597938058275" duration="5022000" />
+      <workItem from="1597985959483" duration="613000" />
+      <workItem from="1597991472285" duration="7120000" />
+      <workItem from="1598204939851" duration="1214000" />
+      <workItem from="1598242590587" duration="46000" />
+      <workItem from="1598278775323" duration="9604000" />
+      <workItem from="1598331246598" duration="528000" />
+      <workItem from="1598613815599" duration="3817000" />
+      <workItem from="1598638137855" duration="7703000" />
+      <workItem from="1598689241934" duration="5294000" />
+      <workItem from="1598770158206" duration="97000" />
+      <workItem from="1599984842739" duration="7532000" />
+      <workItem from="1600021155629" duration="3239000" />
+      <workItem from="1600060162135" duration="16000" />
     </task>
     <servers />
   </component>
@@ -226,18 +266,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="375" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1596900454011" />
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596900963541">
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599989815709">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596900963541" />
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599989815709" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1596811416793">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1596811416793" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1597168198497">
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1600060176874">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597168198497" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600060176874" />
     <state width="530" height="446" key="SwitcherDM" timestamp="1596811260737">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -250,21 +290,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.RecentChangeDialog/0.0.1366.728@0.0.1366.728" timestamp="1596811416794" />
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1597033914827">
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1600060161758">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1597033914827" />
-    <state x="390" y="120" width="586" height="488" key="find.popup" timestamp="1597168040512">
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1600060161758" />
+    <state x="390" y="120" width="710" height="546" key="find.popup" timestamp="1598638248159">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="120" width="586" height="488" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1597168040512" />
+    <state x="390" y="120" width="710" height="546" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1598638248159" />
     <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1596898319814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1596898319814" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597168979247">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600025035132">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597168979247" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600025035132" />
   </component>
 </project>

@@ -9,6 +9,7 @@ const routes = [
         path: '/admin/',
         meta: {
             title: 'Home Services',
+
             bodyClass: 'hold-transition login-page',
             noHeader: true
 
@@ -37,6 +38,17 @@ const routes = [
         },
         component: require('./components/labour/labour').default,
     },
+    {
+        name: 'job-management',
+        path: '/admin/job-management',
+        meta: {
+            title: 'Home Services',
+            bodyClass: 'skin-green',
+            noHeader: true,
+            requiresAuth: true
+        },
+        component: require('./components/job/job').default,
+    },
 
 ];
 
@@ -52,8 +64,6 @@ const admin = 1;
 const title = document.title;
 
 router.beforeEach((to, from, next) => {
-console.log(to);
-
     return next();
 });
 

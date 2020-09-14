@@ -1,57 +1,32 @@
 <template>
     <div>
-        <b-modal id="addLabour" ref="myModalRef" :hide-footer=true>
+        <b-modal id="addLabourTimings" ref="myModalRef" :hide-footer=true>
             <template slot="modal-title">
-                Add Labour
+                Add Labour Timings
             </template>
             <alert v-if="errorMessage || successMessage" :errorMessage="errorMessage" :successMessage="successMessage"></alert>
             <form @submit.prevent="onSubmit">
 
                 <div class="form-group">
                     <label>CNIC</label>
-                    <input type="text" class="form-control" v-model="formData.cnic">
-                </div>
-                <div class="form-group">
-                    <label>Phone</label>
-                    <input type="text" class="form-control" v-model="formData.phone">
-                </div>
-                <div class="form-group">
-                    <label>Registeration Number.</label>
-                    <input type="text" class="form-control" v-model="formData.registeration_num">
-                </div>
-                <div class="form-group">
-                    <label>Categories</label>
-                    <select class="form-control" v-model="formData.category_id">
-                        <option value="" disabled>Select Section</option>
-                        <option v-for="cat in getCategories"
-                                :value="cat.id">
-                            {{cat.category_name}}
+                    <select class="form-control" v-model="labour_id" onchange="getSlots">
+                        <option value="" >Select Labour</option>
+                        <option v-for="lab in getLabours"
+                                :value="lab.id">
+                            <span>CNIC : {{lab.cnic}}</span>
                         </option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Cities</label>
-                    <select class="form-control" v-model="formData.city_id">
-                        <option value="" disabled>Select Section</option>
-                        <option v-for="city in myCities"
-                                :value="city.id">
-                            {{city.name}}
+                    <label>CNIC</label>
+                    <select class="form-control" v-model="time_slot_id">
+                        <option value="" >Select Timings</option>
+                        <option v-for="slots in getTimings"
+                                :value="slots.id">
+                            <span>Time slots :{{slots.start_time}} to {{slots.end_time}} Shift:{{slots.shift}}</span>
                         </option>
                     </select>
                 </div>
-
-                <div class="form-group">
-                    <label>Address.</label>
-                    <b-form-textarea
-                        id="textarea2"
-                        placeholder=""
-                        rows="3"
-                        max-rows="6"
-                        v-model="formData.address"
-                    ></b-form-textarea>
-                </div>
-
-
                 <div slot="modal-footer" class="custom-modal-footer">
                     <div class="row m-0">
                         <div class="col-sm-12 text-right">
@@ -81,61 +56,68 @@
                 errorMessage: '',
                 successMessage: '',
                 loading: false,
-                getCategories:[],
-                formData: {
-                    cnic: "",
-                    registeration_num: "",
-                    phone: "",
-                    city_id: "",
-                    address:"",
-                    category_id: "",
+                getLabours:[],
+                getTimings:[],
+                labour_id:'',
+                time_slot_id:'',
 
-                },
-                myCities:[]
             }
         },
         mounted() {
-            this.getCities();
-            this.getAllCategories();
+
+            this.getAllLabours();
+            this.getAllTimings();
            // this.getAllProjectSpeciality();
         },
         methods: {
-            getAllCategories() {
-                let self = this;
-                let url = '/categories-all';
-                self.$http.get(url).then(response => {
-                    response = response.data;
-                    this.getCategories=response;
-                    console.log(response);
-
-                }).catch(error => {
-                });
-            },
-            getCities()
+            getSlots()
             {
                 let self = this;
-                let url = '/get-cities';
+                let url = '/get-labour-slots';
                 self.$http.get(url).then(response => {
-                    response = response.data;
-                    this.myCities=response;
+                    /*response = response.data;
+                    self.getLabourSlots=response;
+                    console.log(self.getLabourSlots,'slots');*/
+
+
                 }).catch(error => {
                 });
 
             },
+            getAllTimings()
+            {
+                let self = this;
+                let url = '/time-slots';
+                self.$http.get(url).then(response => {
+                    response = response.data;
+                    self.getTimings=response;
+                    console.log(self.getTimings,'timings');
+
+
+                }).catch(error => {
+                });
+            },
+            getAllLabours() {
+                let self = this;
+                let url = '/labours-all';
+                self.$http.get(url).then(response => {
+                    response = response.data;
+                    this.getLabours=response.data;
+                    console.log(this.getLabours,'vava');
+
+
+                }).catch(error => {
+                });
+            },
+
             hideModal() {
                 this.resetFormFields();
                 this.$refs.myModalRef.hide();
             },
             resetFormFields() {
                 let self = this;
-                this.formData = {
-                    cnic: "",
-                    registeration_num: "",
-                    phone: "",
-                    city_id: "",
-                    address:"",
-                    category_id: '',
-                };
+             this.labour_id='';
+                this.time_slot_id='';
                 setTimeout(function () {
                     Vue.nextTick(() => {
                         self.errorMessage = '';
@@ -146,7 +128,8 @@
             },
             onSubmit() {
                 this.loading = true;
-                let url = '/labour';
+                let url = '/add-labour-timings';
+                this.formData={'labour_id':this.labour_id,'time_slot_id':this.time_slot_id};
                 var data = Object.assign({}, this.formData);
                 var self = this;
                 this.$http.post(url, data).then(response => {
@@ -180,14 +163,7 @@
             list: function () {
                 this.errorMessage = '';
                 this.successMessage = '';
-                this.errorBag.clear();
-                this.formData.id = this.list.id;
-                this.formData.cnic = this.list.cnic;
-                this.formData.registeration_num = this.list.registeration_num;
-                this.formData.phone = this.list.phone;
-                this.formData.city_id = this.list.city_id;
-                this.formData.address = this.list.address;
-                this.formData.category_id = this.list.category_id;
+
             }
         },
     }

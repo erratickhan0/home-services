@@ -4,9 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+class TimeSlot extends Model
 {
-   protected $table='customer';
-
-
+    protected $table='time_slots';
 }

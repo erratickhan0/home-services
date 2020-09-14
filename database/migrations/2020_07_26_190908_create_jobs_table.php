@@ -18,7 +18,7 @@ class CreateJobsTable extends Migration
             $table->integer('customer_id');
             $table->integer('labour_id');
             $table->integer('category_id');
-            $table->integer('address_id');
+            $table->integer('cust_address_id');
             $table->string('location')->nullable();
             $table->string('code')->nullable();
             $table->string('latitude')->nullable();

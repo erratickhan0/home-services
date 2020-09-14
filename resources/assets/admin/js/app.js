@@ -16,6 +16,7 @@ window.moment = require('moment');
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import vbclass from 'vue-body-class';
 import BootstrapVue from 'bootstrap-vue';
 import axios from 'axios';
 import router from './routes';
@@ -56,6 +57,7 @@ Vue.use(VueRouter);
 Vue.use(BootstrapVue);
 Vue.use(Vuex);
 Vue.use(VueAxios, axios);
+Vue.use(vbclass, router);
 // Vue.component('multiselect', Multiselect);
 // Vue.component('MaterialIcons', MaterialIcons);
 

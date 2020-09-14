@@ -6,7 +6,7 @@
             <div class="content-wrapper" style="min-height: 306px;">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>Labours</h1>
+                    <h1>Jobs</h1>
                     <b-breadcrumb :items="items"></b-breadcrumb>
                 </section>
 
@@ -27,7 +27,7 @@
                                             class=""
                                         >
 
-                                            <input type="text" placeholder="Search" v-model="search"  v-on:keyup="onApply" class="form-control">
+                                            <input type="text" placeholder="Search" v-model="search"   class="form-control">
                                             <b-input-group-append>
                                                 <b-button size="sm" text="Button" variant="success">
                                                     <i class="fa fa-search"></i>
@@ -38,11 +38,7 @@
                                 </div>
 
                                 <div class="col-sm-6 col-md-6 col-lg-7 mobl-btn-block text-right">
-                                    <!-- Button trigger modal -->
-                                    <b-button v-b-modal.addLabourTimings variant="success" size="lg">Add Timings</b-button>
-                                    <b-button v-b-modal.addLabour variant="success" size="lg">Add Labour</b-button>
 
-                                    <!-- Modal -->
                                 </div>
                             </div>
                         </div>
@@ -52,44 +48,47 @@
                                     <tbody>
                                     <tr>
                                         <th style="width: 10px">#</th>
-                                        <th>CNIC</th>
-                                        <th>Phone</th>
-                                        <th>Address</th>
-                                        <th>City</th>
                                         <th>Category</th>
-                                        <th>Timings</th>
+                                        <th>Customer Name</th>
+                                        <th>Labour Name</th>
+                                        <th>Cust address</th>
+                                        <th>Status</th>
+
                                     </tr>
                                     <tr  v-for="(list, index) in listing" v-if="listing.length && !loadingStart" >
                                         <td>{{list.id}}</td>
                                         <td class="list-business">
-                                            <span>{{list.cnic}}</span>
-                                        </td>
-                                        <td class="list-business">
-                                            <span>{{list.phone}}</span>
-                                        </td>
-                                        <td class="list-business">
-                                            <span>{{list.address}}</span>
-                                        </td>
-                                        <td class="list-business">
-                                            <span>{{list.cities.name}}</span>
-                                        </td>
-                                        <td class="list-business" >
                                             <span v-if="list.cats">{{list.cats.category_name}}</span>
                                         </td>
-                                        <td class="list-business" >
-                                            <span v-if="list.timings" v-for="(time,time_index) in list.timings">
-                                                <span>Timings: {{time.start_time}} to {{time.end_time}}, Shift : {{time.shift}}</span>
-                                            </span>
+                                        <td class="list-business">
+                                            <span v-if="list.customer">{{list.customer.first_name}}  {{list.customer.last_name}}</span>
                                         </td>
+                                        <td class="list-business">
+                                            <span v-if="list.labour">{{list.labour.cnic}}</span>
+                                        </td>
+                                        <td class="list-business">
+                                            <span v-if="list.cust_address">{{list.cust_address.area}}</span>
+                                        </td>
+                                        <div class="form-group">
+                                            <select class="form-control" @change="statusUpdate(list.id)" v-model="job_status[list.id]">
+                                                <option value="" disabled>Select Section</option>
+                                                <option value="accepted">Accepted</option>
+                                                <option value="rejected">Rejected</option>
+                                                <option value="assigned">Assigned</option>
+                                                <option value="in_progress">In progress</option>
+                                                <option value="done">Done</option>
+                                            </select>
+                                        </div>
 
-                                        <td width="150">
+
+                                        <!--<td width="150">
                                             <div class="actions action-edit text-center">
                                                 <a href="#" v-b-modal.addLabour  @click="updateLabour(list)"><i
                                                     class="fa fa-fw fa-edit"></i></a>
                                                 <a href="#" v-b-modal.deleteRecord @click="deleteLabour(list)">
                                                     <i class="fa fa-fw fa-trash"></i></a>
                                             </div>
-                                        </td>
+                                        </td>-->
 
                                     </tr>
                                     </tbody>
@@ -113,14 +112,22 @@
 
         </div>
         <!--<sub-category-modal  @call-list="onCallList"></sub-category-modal>-->
-        <add-labour-timings-modal    :list="list" @call-list="onCallList"></add-labour-timings-modal>
-        <add-labour-modal  :list="list" @call-list="onCallList"></add-labour-modal>
+        <!--<add-labour-modal  :list="list" @call-list="onCallList"></add-labour-modal>-->
         <!--<delete-record-modal  :requestUrl="submitUrl" @call-list="onCallList"></delete-record-modal>-->
+        <b-modal  id="back-popup" ref="changeStatus"  size="md" :hide-footer=true>
+            <div class="text-center">
+                <p>Are you sure you want to delete?</p>
+                <a  href="#"   @click='changeStatus(true)' class="btn mrg-raq">Yes</a>
+                <a  href="#"   @click='changeStatus(false)' class="btn">No</a>
+
+            </div>
+        </b-modal>
     </div>
 </template>
 
 <script>
     export default {
+        name:'job',
         data() {
             return {
                 list_id:'',
@@ -133,7 +140,7 @@
                 currentRecord : '',
                 search: '',
                 currentPage: 1,
-                url: '/labours-all',
+                url: '/jobs-all',
                 items: [
                     {
                         text: 'Home',
@@ -147,7 +154,13 @@
                         text: 'List',
                         active: true
                     }
-                ]
+                ],
+                formData:{
+                    id:'',
+                    status:'',
+
+                },
+                job_status:[]
             }
         },
         watch: {
@@ -160,6 +173,38 @@
         },
 
         methods: {
+            changeStatus(flag)
+            {
+                if(flag==false)
+                {
+                    this.$refs.changeStatus.hide();
+                }
+                else
+                {
+                    this.$refs.changeStatus.hide();
+                    let url = '/job-status-change';
+                    this.formData.status=this.job_status[this.formData.id];
+
+
+                    var data = Object.assign({}, this.formData);
+                    this.$http.post(url, data).then(response => {
+                        response = response.data;
+
+                    }).catch(error => {
+                        self.errorMessage = error.response.data.error.message;
+                        this.loading = false;
+                    });
+
+                }
+
+
+            },
+            statusUpdate(listid)
+            {
+                this.formData.id=listid;
+                this.$refs.changeStatus.show();
+
+            },
             getList(data, page, successCallback)
             {
                 let self = this;
@@ -189,8 +234,35 @@
                     var response=response.data;
 
                     self.listing = response.data;
+                    console.log(self.listing,'listing');
+                    self.listing.forEach(function(value,key) {
+                        if(value.status!=null)
+                        {
+                            if(value.status.accepted==true)
+                            {
+                                self.job_status[value.id]='accepted';
+                            }
+                            if(value.status.rejected==1)
+                            {
+                                self.job_status[value.id]='rejected';
+                            }
+                            if(value.status.in_progress==1)
+                            {
+                                self.job_status[value.id]='in_progress';
+                            }
+                            if(value.status.assigned==1)
+                            {
+                                self.job_status[value.id]='assigned';
+                            }
+                            if(value.status.done==1)
+                            {
+                                self.job_status[value.id]='done';
+                            }
+
+                        }
 
 
+                    });
                     if (!self.listing.length) {
                         self.showNoRecordFound = true;
                     }
@@ -210,25 +282,6 @@
                     }
                 });
             },
-            updateLabour(list) {
-                this.list = list;
-            },
-            deleteLabour(list) {
-                this.list = list;
-                this.currentRecord = list;
-
-            },
-            onCallList() {
-                this.onApply();
-            },
-            onApply() {
-                this.loadingStart = true;
-                this.loading = true;
-                var data = {
-                    search: this.search
-                };
-                this.getList(data, false);
-            }
 
         },
         mounted() {
@@ -238,7 +291,7 @@
         computed: {
             submitUrl(){
                 if(this.currentRecord){
-                   // return '/api/category/'+this.currentRecord.id;
+                    // return '/api/category/'+this.currentRecord.id;
                 }
             }
         }
@@ -247,4 +300,6 @@
     }
 </script>
 
+<style scoped>
 
+</style>

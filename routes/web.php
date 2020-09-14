@@ -33,6 +33,16 @@ Route::middleware('auth:web')->group(function() {
     Route::resource('labour', 'LaboursController');
     Route::get('/labours-all', 'LaboursController@findByAllAdmin');
 
+    Route::get('/jobs-all', 'JobsController@findByAllAdmin');
+    Route::post('job-status-change','JobsController@jobStatusChangeByAdmin');
+
+
+    Route::get('/time-slots', 'TimeSlotsController@findTimeSlots');
+    Route::post('add-labour-timings','LaboursController@addLabourTimings');
+    Route::get('/get-labour-slots', 'LaboursController@getLabourSlots');
+
+
+
 
 });
 

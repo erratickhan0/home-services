@@ -22,7 +22,7 @@
                   <li class="dropdown user user-menu">
                     <a href="#" class="profile">
 
-                       <img src="/assets/admin/images/admin.jpg"class="user-image" alt="User Image">
+                       <!--<img src="/assets/admin/images/admin.jpg"class="user-image" alt="User Image">-->
                       <span class="hidden-xs"> </span>
                     </a>
                   </li>
